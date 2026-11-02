@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Badminton</title>
+	<link rel="stylesheet" href="css/bootstrap-grid.css" type="text/css">
+	<link rel="stylesheet" href="css/styles.css" type="text/css">
+	<link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<style>
+		.project-container {
+			background-color: white;
+			max-width: 1200px;
+			margin: 0 auto;
+			box-shadow: 0 0 30px rgba(0,0,0,0.1);
+		}
+		.full-width-image {
+			width: 100%;
+			height: 500px;
+			object-fit: cover;
+		}
+		.breadcrumb {
+			padding: 20px;
+			background-color: #f8f9fa;
+			font-family: 'IBM Plex Mono', monospace;
+			font-size: 14px;
+		}
+		.breadcrumb a {
+			color: black;
+			text-decoration: none;
+		}
+		.breadcrumb a:hover {
+			text-decoration: underline;
+		}
+		.project-title {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			font-size: 50pt;
+			transform: translate(-50%, -50%);
+			color: white;
+			text-align: center;
+			text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+		}
+		.image-container {
+			position: relative;
+		}
+		
+		/* Slider Styles */
+		.project-slider {
+			position: relative;
+			width: 100%;
+			overflow: hidden;
+		}
+		.slider-container {
+			display: flex;
+			transition: transform 0.5s ease;
+			width: 300%;
+		}
+		.slider-slide {
+			width: 33.33%;
+			flex-shrink: 0;
+		}
+		.slider-slide img {
+			width: 100%;
+			height: 500px;
+			object-fit: cover;
+		}
+		.slider-controls {
+			position: absolute;
+			bottom: 20px;
+			left: 50%;
+			transform: translateX(-50%);
+			display: flex;
+			gap: 10px;
+		}
+		.slider-dot {
+			width: 10px;
+			height: 10px;
+			background-color: rgba(255,255,255,0.5);
+			border-radius: 50%;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+		.slider-dot.active {
+			background-color: white;
+		}
+		
+		/* Slider Checkbox Hack */
+		.slider-toggle {
+			display: none;
+		}
+		#slide1:checked ~ .slider-container {
+			transform: translateX(0);
+		}
+		#slide2:checked ~ .slider-container {
+			transform: translateX(-33.33%);
+		}
+		#slide3:checked ~ .slider-container {
+			transform: translateX(-66.66%);
+		}
+	</style>
+</head>
+
+<body>
+	<nav>
+		<ul>
+			<li><a href="#contact">contact</a></li>
+			<li>works</li>
+			<li>expertience</li>
+			<li><a href="index.html"><strong>-Home-</strong></a></li>
+			<li><a href="profil.html">profil</a></li>
+			<li><a href="https://www.instagram.com/its_me_razky/" target="_blank">Instagram</a></li>
+			<li>linkedin</li>
+		</ul>
+	</nav>
+
+	<div class="project-container">
+		<div class="image-container">
+			<img src="./img/badminton-sport-rapide.jpg" class="full-width-image" alt="Cosmetics Branding Project">
+			<h1 class="project-title">Badminton</h1>
+		</div>
+		<div class="breadcrumb">
+			<a href="../index.html">Home</a> / Badminton
+		</div>
+		<section class="project" style="padding-top: 50px;">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>Sejarah</h2>
+						<p>Olahraga yang dimainkan dengan kok dan raket, kemungkinan berkembang di Mesir kuno sekitar 2000 tahun lalu tetapi juga disebut-sebut di India dan Republik Rakyat Tiongkok. 
+                            <br>Di Tiongkok, terdapat permainan yang disebut Jianzi, yang melibatkan penggunaan kok tetapi tanpa raket. Alih-alih, koknya dimanipulasi dengan kaki. Objektif permainan ini adalah untuk menjaga kok agar tidak menyentuh tanah selama mungkin tanpa menggunakan tangan.
+                            <br>Di Inggris sejak zaman pertengahan permainan anak-anak yang disebut Battledores dan Shuttlecocks sangat populer. Anak-anak pada waktu itu biasanya akan memakai dayung/tongkat (Battledores) dan bersiasat bersama untuk menjaga kok tetap di udara dan mencegahnya dari menyentuh tanah. Ini cukup populer untuk menjadi nuansa harian di jalan-jalan London pada tahun 1854 ketika majalah Punch memublikasikan kartun untuk ini.
+                            <br>Penduduk Inggris membawa permainan ini ke Jepang, Republik Rakyat Tiongkok, dan Siam (sekarang Thailand) selagi mereka mengolonisasi Asia. Ini kemudian dengan segera menjadi permainan anak-anak di wilayah setempat mereka.
+                            <br>Olahraga kompetitif bulu tangkis diciptakan oleh petugas Tentara Britania di Pune, India pada abad ke-19 saat mereka menambahkan jaring dan memainkannya secara bersaingan. Oleh sebab kota Pune dikenal sebelumnya sebagai Poona, permainan tersebut juga dikenali sebagai Poona pada masa itu.
+                            <br>Para tentara membawa permainan itu kembali ke Inggris pada 1850-an. Olahraga ini mendapatkan namanya yang sekarang pada 1860 dalam sebuah pamflet oleh Isaac Spratt, seorang penyalur mainan Inggris, berjudul "Badminton Battledore - a new game" ("Battledore bulu tangkis - sebuah permainan baru"). Ini melukiskan permainan tersebut dimainkan di Gedung Badminton (Badminton House), estat Duke of Beaufort's di Gloucestershire, Inggris.
+                            <br>Rancangan peraturan yang pertama ditulis oleh Klub Badminton Bath pada 1877. Asosiasi Bulu Tangkis Inggris dibentuk pada 1893 dan kejuaraan internasional pertamanya berunjuk-gigi pertama kali pada 1899 dengan Kejuaraan All England.
+                            <br>Bulu tangkis menjadi sebuah olahraga populer di dunia, terutama di wilayah Asia Timur dan Tenggara, yang saat ini mendominasi olahraga ini, dan di negara-negara Skandinavia.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="project blue">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>Partai</h2>
+						<p>Ada lima partai yang biasa dimainkan dalam bulu tangkis, yaitu:</p>
+						<ul>
+							<li>1. Tunggal putra</li>
+							<li>2. Tunggal putri</li>
+							<li>3. Ganda putra</li>
+							<li>4. Ganda putri</li>
+                            <li>5. Ganda campurans</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="project">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>Lapangan dan jaring</h2>
+						<p>Lapangan bulu tangkis berbentuk persegi panjang dan mempunyai ukuran seperti terlihat pada gambar. Garis-garis yang ada mempunyai ketebalan 40 mm dan harus berwarna kontras terhadap warna lapangan. Warna yang disarankan untuk garis adalah putih atau kuning. Permukaan lapangan disarankan terbuat dari kayu atau bahan sintetis yang lunak. Permukaan lapangan yang terbuat dari beton atau bahan sintetik yang keras sangat tidak dianjurkan karena dapat mengakibatkan cedera pada pemain. Jaring setinggi 1,55 m berada tepat di tengah lapangan. Jaring harus berwarna gelap kecuali bibir jaring yang mempunyai ketebalan 75 mm harus berwarna putih.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="project blue">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>Perlengkapan</h2>
+						<ul>
+							<li>-Raket</li>
+                            <p>Secara tradisional raket dibuat dari kayu. Kemudian aluminium atau logam ringan lainnya menjadi bahan yang dipilih. Kini, hampir semua raket bulu tangkis profesional berkomposisikan komposit serat karbon (plastik bertulang grafit). Serat karbon memiliki kekuatan hebat terhadap perbandingan berat, kaku, dan memberi perpindahan energi kinetik yang hebat. Namun, sejumlah model rendahan masih menggunakan baja atau aluminium untuk sebagian atau keseluruhan raket.</p>
+							<li>-Senar</li>
+                            <p>Mungkin salah satu dari bagian yang paling diperhatikan dalam bulu tangkis adalah senarnya. Jenis senar berbeda memiliki ciri-ciri tanggap berlainan. Keawetan secara umum bervariasi dengan kinerja. Kebanyakan senar memiliki ketebalan 21 ukuran dan diuntai dengan ketegangan 18 sampai 30+ lb. Kesukaan pribadi sang pemain memainkan peran yang kuat dalam seleksi senar.</p>
+							<li>-Kok</li>
+                            <p>Kok adalah bola yang digunakan dalam olahraga bulu tangkis, terbuat dari rangkaian bulu angsa yang disusun membentuk kerucut terbuka, dengan pangkal berbentuk setengah bola yang terbuat dari gabus. Dalam latihan atau pertandingan tidak resmi digunakan juga kok dari plastik.</p>
+							<li>-Sepatu</li>
+                            <p>Karena percepatan sepanjang lapangan sangatlah penting, para pemain membutuhkan cengkeraman dengan lantai yang maksimal pada setiap saat. Sepatu bulu tangkis membutuhkan sol karet untuk cengkeraman yang baik, dinding sisi yang bertulang agar tahan lama selama tarik-menarik, dan teknologi penyebaran guncangan untuk melompat; bulu tangkis mengakibatkan agak banyak stres (ketegangan) pada lutut dan pergelangan kaki.</p>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="project">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>Gallery</h2>
+						<div class="project-slider">
+							<input type="radio" name="slider" id="slide1" class="slider-toggle" checked>
+							<input type="radio" name="slider" id="slide2" class="slider-toggle">
+							<input type="radio" name="slider" id="slide3" class="slider-toggle">
+							
+							<div class="slider-container">
+								<div class="slider-slide">
+									<img src="./img/Badminton1.jpg" alt="Dashboard App">
+								</div>
+								<div class="slider-slide">
+									<img src="./img/Badminton2.jpg" alt="Cosmetics Project">
+								</div>
+								<div class="slider-slide">
+									<img src="./img/badminton3.jpg" alt="iPad App">
+								</div>
+							</div>
+							
+							<div class="slider-controls">
+								<label for="slide1" class="slider-dot"></label>
+								<label for="slide2" class="slider-dot"></label>
+								<label for="slide3" class="slider-dot"></label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<footer id="contact">
+		<h2>Interested in<br>
+			learning more?<br>razkysaputra01@gmail.com</h2>
+			<p>designed & developed by Razky Saputra 2026</p>
+		</footer>
+	</body>
+	</html>

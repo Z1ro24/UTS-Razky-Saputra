@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Coding</title>
+	<link rel="stylesheet" href="css/bootstrap-grid.css" type="text/css">
+	<link rel="stylesheet" href="css/styles.css" type="text/css">
+	<link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<style>
+		.project-container {
+			background-color: white;
+			max-width: 1200px;
+			margin: 0 auto;
+			box-shadow: 0 0 30px rgba(0,0,0,0.1);
+		}
+		.full-width-image {
+			width: 100%;
+			height: 500px;
+			object-fit: cover;
+		}
+		.breadcrumb {
+			padding: 20px;
+			background-color: #f8f9fa;
+			font-family: 'IBM Plex Mono', monospace;
+			font-size: 14px;
+		}
+		.breadcrumb a {
+			color: black;
+			text-decoration: none;
+		}
+		.breadcrumb a:hover {
+			text-decoration: underline;
+		}
+		.project-title {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			font-size: 40pt;
+			transform: translate(-50%, -50%);
+			color: white;
+			text-align: center;
+			text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+		}
+		.image-container {
+			position: relative;
+		}
+		
+		/* Slider Styles */
+		.project-slider {
+			position: relative;
+			width: 100%;
+			overflow: hidden;
+		}
+		.slider-container {
+			display: flex;
+			transition: transform 0.5s ease;
+			width: 300%;
+		}
+		.slider-slide {
+			width: 33.33%;
+			flex-shrink: 0;
+		}
+		.slider-slide img {
+			width: 100%;
+			height: 500px;
+			object-fit: cover;
+		}
+		.slider-controls {
+			position: absolute;
+			bottom: 20px;
+			left: 50%;
+			transform: translateX(-50%);
+			display: flex;
+			gap: 10px;
+		}
+		.slider-dot {
+			width: 10px;
+			height: 10px;
+			background-color: rgba(255,255,255,0.5);
+			border-radius: 50%;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+		.slider-dot.active {
+			background-color: white;
+		}
+		
+		/* Slider Checkbox Hack */
+		.slider-toggle {
+			display: none;
+		}
+		#slide1:checked ~ .slider-container {
+			transform: translateX(0);
+		}
+		#slide2:checked ~ .slider-container {
+			transform: translateX(-33.33%);
+		}
+		#slide3:checked ~ .slider-container {
+			transform: translateX(-66.66%);
+		}
+	</style>
+</head>
+
+<body>
+	<nav>
+		<ul>
+			<li><a href="#contact">contact</a></li>
+			<li>works</li>
+			<li>expertience</li>
+			<li><a href="index.html"><strong>-Home-</strong></a></li>
+			<li><a href="profil.html">profil</a></li>
+			<li><a href="https://www.instagram.com/its_me_razky/" target="_blank">Instagram</a></li>
+			<li>linkedin</li>
+		</ul>
+	</nav>
+
+	<div class="project-container">
+		<div class="image-container">
+			<img src="./img/Heker.jpg" class="full-width-image" alt="Dashboard App UX Design Project">
+			<h1 class="project-title">Coding</h1>
+		</div>
+		<div class="breadcrumb">
+			<a href="../index.html">Home</a> / Coding
+		</div>
+		<section class="project" style="padding-top: 50px;">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>Project Overview</h2>
+						<p>Project ini merupakan pengembangan sebuah program sederhana yang dibuat untuk membantu pengguna mengelola dan mengolah data secara lebih mudah melalui sistem berbasis pemrograman. Program dirancang dengan menggunakan konsep dasar pemrograman seperti input data, proses pengolahan, percabangan, perulangan, fungsi, serta pengelolaan data.
+                            <br>Tujuan utama project adalah membuat program yang tidak hanya dapat menerima dan menampilkan data, tetapi juga menyediakan beberapa fitur pengolahan data sesuai kebutuhan pengguna. Program dibuat dengan alur yang sederhana agar mudah digunakan dan dipahami, terutama bagi pengguna yang masih berada pada tahap awal mempelajari pemrograman. 
+                            <br>Dalam pengembangannya, program memperhatikan hubungan antara input, proses, dan output. Pengguna memberikan data sebagai input, kemudian program melakukan proses berdasarkan kondisi atau pilihan yang diberikan, dan menghasilkan output berupa informasi yang sesuai. Dengan demikian, project ini dapat menjadi contoh penerapan konsep pemrograman dalam menyelesaikan permasalahan secara sistematis.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="project blue">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>Research & Discovery</h2>
+						<p>Tahap research dan discovery dilakukan untuk mengetahui kebutuhan pengguna serta menentukan fitur yang diperlukan dalam program. Proses ini dimulai dengan mengidentifikasi permasalahan yang dapat diselesaikan menggunakan sistem terkomputerisasi.
+                            <br>Berdasarkan hasil identifikasi, program membutuhkan sistem yang mudah digunakan, memiliki alur yang jelas, serta mampu mengolah data berdasarkan pilihan pengguna. Oleh karena itu, beberapa konsep dasar pemrograman digunakan untuk mendukung kebutuhan tersebut, seperti percabangan untuk menentukan kondisi, perulangan untuk menjalankan proses secara berulang, fungsi untuk mengelompokkan proses tertentu, dan pengelolaan data untuk menyimpan informasi.
+                            <br>Pada tahap ini juga diperhatikan bagaimana pengguna berinteraksi dengan program. Menu dibuat agar pengguna dapat memilih fitur yang dibutuhkan tanpa harus menjalankan proses secara terpisah. Selain itu, program dibuat agar dapat memberikan informasi atau pesan ketika pengguna memasukkan data yang tidak sesuai atau memilih suatu tindakan tertentu.
+                            <br>Hasil dari tahap research dan discovery kemudian digunakan sebagai dasar dalam menentukan struktur program, alur proses, fitur utama, serta bentuk output yang akan ditampilkan kepada pengguna.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="project">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>Key Outcomes</h2>
+						<p>Hasil utama dari project ini adalah terciptanya sebuah program yang mampu menjalankan proses pengolahan data sesuai dengan kebutuhan yang telah ditentukan. Program dapat menerima input dari pengguna, memproses data berdasarkan aturan yang diberikan, dan menampilkan hasil dalam bentuk output yang mudah dipahami.
+                            <br>Penerapan percabangan membuat program mampu mengambil keputusan berdasarkan kondisi tertentu, sedangkan perulangan memungkinkan pengguna menggunakan menu atau menjalankan proses tanpa harus memulai program kembali. Penggunaan fungsi juga membuat struktur program menjadi lebih terorganisir dan memudahkan proses pengembangan.
+                            <br>Secara keseluruhan, project ini menunjukkan bahwa konsep dasar pemrograman dapat digunakan untuk membuat solusi yang lebih terstruktur terhadap suatu permasalahan. Selain menghasilkan program yang dapat digunakan, project ini juga memberikan pemahaman mengenai bagaimana proses analisis kebutuhan diterjemahkan menjadi fitur dan alur program yang dapat dijalankan.</p>					
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="project blue">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>Project Gallery</h2>
+						<div class="project-slider">
+							<input type="radio" name="slider" id="slide1" class="slider-toggle" checked>
+							<input type="radio" name="slider" id="slide2" class="slider-toggle">
+							<input type="radio" name="slider" id="slide3" class="slider-toggle">
+							
+							<div class="slider-container">
+								<div class="slider-slide">
+									<img src="./img/Koding1.png" alt="Dashboard App Main Interface">
+								</div>
+								<div class="slider-slide">
+									<img src="./img/Koding2.jpg" alt="Dashboard App Analytics View">
+								</div>
+							</div>
+							
+							<div class="slider-controls">
+								<label for="slide1" class="slider-dot"></label>
+								<label for="slide2" class="slider-dot"></label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<footer id="contact">
+		<h2>Interested in<br>
+			learning more?<br>razkysaputra01@gmail.com</h2>
+			<p>designed & developed by Razky Saputra 2026</p>
+		</footer>
+	</body>
+	</html>
